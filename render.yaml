@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: obra-autoreply
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PAGE_TOKEN
+        value: EAADhsxfbE8sBRiYHVjbHaxBXiab2eatapWQLAF3LtyxGAbRp3Q7R2JYoTAaoDw52GhBusOnhSQGpX3dxeN2fUsbigah87FxF84gEvhSfZA57VO8MndH4DkYCsD1MnHyY7rMksUZCL0Xkz9eCxiPK6q7L3khhoKkA1pj1T51aIJ15ZBQDrfZCEZCp59VZCIqRQvj1tMO9BfBtLUCUII7AZDZD
+      - key: VERIFY_TOKEN
+        value: OBRA2026

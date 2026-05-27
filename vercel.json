@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ],
+  "env": {
+    "PAGE_TOKEN": "EAADhsxfbE8sBRiYHVjbHaxBXiab2eatapWQLAF3LtyxGAbRp3Q7R2JYoTAaoDw52GhBusOnhSQGpX3dxeN2fUsbigah87FxF84gEvhSfZA57VO8MndH4DkYCsD1MnHyY7rMksUZCL0Xkz9eCxiPK6q7L3khhoKkA1pj1T51aIJ15ZBQDrfZCEZCp59VZCIqRQvj1tMO9BfBtLUCUII7AZDZD",
+    "VERIFY_TOKEN": "OBRA2026"
+  }
+}
