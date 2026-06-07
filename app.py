@@ -3,10 +3,11 @@ import requests, os
 
 app = Flask(__name__)
 
-PAGE_TOKEN = os.environ.get("PAGE_TOKEN")
+PAGE_TOKEN   = os.environ.get("PAGE_TOKEN")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "OBRA2026")
-PAGE_ID = "291919391185010"
+PAGE_ID      = "291919391185010"
 
+# ─── REPLIES (original intact + new ones added) ───────────────────────────────
 REPLIES = {
 "welcome": "Hi {name}! 👋 Salamat sa pag-message sa OBRA Office Furniture!\n\n🏆 10+ Years Trusted | ✅ FREE Installation | 🚚 Nationwide Delivery | 🛡️ 1-Year Warranty\n\nAnong office furniture ang kailangan mo?\nI-type ang tanong mo o pumili:\n\n💰 PRICE - magkano?\n🛒 ORDER - paano mag-order?\n🚚 DELIVERY - libre ba?\n💥 DISCOUNT - may promo?\n🏢 PRODUCTS - anong available?\n\n📖 Catalog: https://tinyurl.com/obra-brochure-updated",
 
@@ -30,31 +31,62 @@ REPLIES = {
 
 "payment": "💳 PAYMENT OPTIONS SA OBRA:\n\n🔶 GCash: 0968-887-8850 (Annaliza V)\n🏦 UnionBank: 000690021288 (OBRA-EGC FURNITURE TRADING)\n💵 Cash on Delivery (COD)\n💵 Cash / Online Banking / E-wallets\n\n📸 Send proof of payment para mapabilis!\n✅ FREE Installation sa lahat ng orders!",
 
+# ── NEW: Order form (fires when client says sige/order/go na) ─────────────────
+"order_form": "Ayos na po! Ready na namin i-process 😊\n\nPara ma-reserve at ma-schedule ang delivery, paki-send po ito:\n\n▪️ Name:\n▪️ Complete Address:\n▪️ Contact Number:\n▪️ Company (kung applicable):\n▪️ Landmark:\n\n📦 Kami na bahala sa delivery at FREE installation! ✅\n💳 Payment: GCash 0968-887-8850 | UnionBank 000690021288 | COD",
+
+# ── NEW: Lockers specific (from Melanie ₱14,899 conversion) ──────────────────
+"lockers": "🗄️ OBRA LOCKERS:\n\n• 4-door Locker — ask price\n• 6-door Locker — ask price\n• 12-door Locker — ask price\n• 18-door Locker — ₱14,899 per unit\n\nHeavy-duty cold-rolled steel | 1-Year Warranty!\n💥 Bulk order = may discount!\n\nIlang units ang kailangan at ilang doors? Para exact quote! 😊",
+
+# ── NEW: Workstation ──────────────────────────────────────────────────────────
+"workstation": "🏢 OBRA WORKSTATIONS & PARTITIONS:\n\n✅ Modular Workstations (2, 4, 6-person)\n✅ Office Partition / Cubicle Systems\n✅ Call Center Setup\n✅ Open Plan Office Furniture\n\n💥 Bulk orders — may special pricing!\n\nIlan po ang staff ninyo? May floor plan ba kayo?\nPara ma-recommend namin ang best layout! 😊",
+
 "default": "Salamat sa pag-message sa OBRA Office Furniture! 😊\n\nI-type ang keyword:\n💰 PRICE — magkano?\n🛒 ORDER — paano mag-order?\n🚚 DELIVERY — libre ba?\n💥 DISCOUNT — may promo?\n🏢 PRODUCTS — anong available?\n🪑 CHAIRS — mga upuan\n🖥️ TABLES — mga mesa\n🗄️ CABINETS — steel storage\n📍 LOCATION — saan kayo?\n💳 PAYMENT — paano magbayad?\n\n📖 https://tinyurl.com/obra-brochure-updated\n📞 0915-743-9188"
 }
 
+# ─── KEYWORDS (original + new closing/order keywords from real convos) ─────────
 KEYWORDS = {
-"price": ["price","presyo","magkano","how much","quote","halaga","mahal","kantidad","how much is","listed price"],
-"order": ["order","paano","mag-order","purchase","buy","bibili","bilhin","place order","how to order","pano order","i want","gusto ko","saan bibili"],
-"delivery": ["delivery","deliver","ship","shipping","padala","libre","free delivery","lalamove","trucking","nationwide","sasakyan","mapadala"],
-"discount": ["discount","promo","sale","bawas","mas mura","bulk","wholesale","negotiable","tawad","pwede pa bawasan","may discount"],
+"price":    ["price","presyo","magkano","how much","quote","halaga","mahal","kantidad","how much is","listed price","quotation","mag quote","tanong presyo"],
+"order":    ["order","paano","mag-order","purchase","buy","bibili","bilhin","place order","how to order","pano order","i want","gusto ko","saan bibili"],
+"order_form": ["sige po","go na","proceed na","push na","tuloy na","yes po order","confirm","ayos na","ok na po","i-order na","paorder","kukunin ko na","bili na","sige na","oo po","go","agreed","deal","tara na","pursue"],
+"delivery": ["delivery","deliver","ship","shipping","padala","libre","free delivery","lalamove","trucking","nationwide","sasakyan","mapadala","mindanao","visayas","luzon","province","region","cargo","forwarder","kelan darating","how long"],
+"discount": ["discount","promo","sale","bawas","mas mura","bulk","wholesale","negotiable","tawad","pwede pa bawasan","may discount","cheaper","mura"],
 "products": ["products","ano ang","what do you","meron ba","offer","available","catalog","items","furniture","anong meron","what products","ano po"],
-"chairs": ["chair","upuan","silya","mesh","high back","mid back","executive chair","visitors chair","reclining","office chair"],
-"tables": ["table","desk","mesa","l-type","executive table","workstation","conference table","l type","writing table"],
-"cabinets": ["cabinet","filing","locker","rack","storage","shelf","shelving","drawer","steel cabinet","estante","cabinet"],
-"location": ["location","address","saan","showroom","office","visit","pumunta","store","pickup","nasa saan","where are you"],
-"payment": ["payment","bayad","gcash","unionbank","cod","cash","bank","bayaran","paano magbayad","payment options","paano bayad"]
+"chairs":   ["chair","upuan","silya","mesh","high back","mid back","executive chair","visitors chair","reclining","office chair","ergonomic","swivel"],
+"tables":   ["table","desk","mesa","l-type","executive table","workstation table","conference table","l type","writing table","teachers table","computer table"],
+"lockers":  ["locker","18 door","12 door","6 door","4 door","locker cabinet","bagong locker"],
+"cabinets": ["cabinet","filing","rack","storage","shelf","shelving","drawer","steel cabinet","estante","file cabinet","steel storage"],
+"workstation": ["workstation","partition","cubicle","modular","open plan","divider","office setup","call center","bulk"],
+"location": ["location","address","saan","showroom","office","visit","pumunta","store","pickup","nasa saan","where are you","hours","oras","open","bukas"],
+"payment":  ["payment","bayad","gcash","unionbank","cod","cash","bank","bayaran","paano magbayad","payment options","paano bayad","gcash number","account number"],
 }
 
+# ─── POSTBACK MAP (ice breakers + menu — now with payloads) ──────────────────
 POSTBACK_MAP = {
-"GET_STARTED":"welcome","PRICE_QUOTE":"price","VIEW_CATALOG":"products",
-"HOW_TO_ORDER":"order","DELIVERY_INFO":"delivery","DISCOUNT_INFO":"discount",
-"CHAIRS":"chairs","TABLES":"tables","CABINETS":"cabinets"
+# Original (keep working)
+"GET_STARTED":   "welcome",
+"PRICE_QUOTE":   "price",
+"VIEW_CATALOG":  "products",
+"HOW_TO_ORDER":  "order",
+"DELIVERY_INFO": "delivery",
+"DISCOUNT_INFO": "discount",
+"CHAIRS":        "chairs",
+"TABLES":        "tables",
+"CABINETS":      "cabinets",
+# New ice breaker payloads (just set today)
+"PROMOS":        "discount",
+"HOW_TO_ORDER":  "order",
+"STEEL_CABINETS":"cabinets",
 }
 
 def classify(text):
     t = text.lower()
+    # Check order_form first (highest priority — closing signal)
+    for w in KEYWORDS["order_form"]:
+        if w in t:
+            return "order_form"
     for intent, words in KEYWORDS.items():
+        if intent == "order_form":
+            continue
         if any(w in t for w in words):
             return intent
     return "default"
@@ -92,17 +124,22 @@ def webhook():
                 continue
             if "postback" in event:
                 payload = event["postback"].get("payload","")
-                intent = POSTBACK_MAP.get(payload, "default")
-                send_msg(psid, REPLIES[intent].replace("{name}",""))
+                intent  = POSTBACK_MAP.get(payload, "default")
+                reply   = REPLIES.get(intent, REPLIES["default"])
+                send_msg(psid, reply.replace("{name}",""))
             elif "message" in event:
                 msg_data = event["message"]
                 if msg_data.get("is_echo"):
+                    continue
+                # Skip attachments — human verifies payment screenshots
+                if msg_data.get("attachments"):
                     continue
                 msg = msg_data.get("text","")
                 if not msg:
                     continue
                 intent = classify(msg)
-                send_msg(psid, REPLIES[intent].replace("{name}",""))
+                reply  = REPLIES.get(intent, REPLIES["default"])
+                send_msg(psid, reply.replace("{name}",""))
     return jsonify({"status":"ok"})
 
 if __name__ == "__main__":
