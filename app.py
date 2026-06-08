@@ -15,7 +15,7 @@ REPLIES = {
 
 "order": "🛒 PAANO MAG-ORDER? (4 Steps lang!)\n\nSTEP 1️⃣ PUMILI\n📖 https://tinyurl.com/obra-brochure-updated\n\nSTEP 2️⃣ IPADALA:\n▪️ Item + Qty\n▪️ Delivery address\n▪️ Contact number\n\nSTEP 3️⃣ KUMUHA NG QUOTE\n✅ Exact price | ✅ Delivery fee | ✅ Lead time\n\nSTEP 4️⃣ BAYAD & DELIVERY!\n🔶 GCash: 0968-887-8850 (Annaliza V)\n🏦 UnionBank: 000690021288 (OBRA-EGC)\n💵 COD available\n✅ FREE Installation!\n\nAnong items ang kailangan? 😊",
 
-"delivery": "🚚 DELIVERY & SHIPPING INFO\n\n✅ FREE INSTALLATION — LAHAT NG ITEMS!\n\n🏙️ Metro Manila — Lalamove (1–2 days)\n🌏 Nationwide — Trucking (2–5 days)\n🌊 Islands — Logistics partner available\n🚌 Bus Liner Drop & Go — available\n\n💰 May FREE delivery promo sa selected areas!\nIpadala ang address para ma-check! 😊\n\n📍 Pick-up: Judge Juan Luna, Roosevelt, QC\n📞 0915-743-9188",
+"delivery": "🚚 DELIVERY INFO\n\n✅ NATIONWIDE DELIVERY — LUZON, VISAYAS, MINDANAO!\n\n🏙️ NCR/Metro Manila: 1–2 days | FREE installation!\n🌏 Luzon (probinsya): 3–5 days | via trucking/cargo\n🌊 Visayas: 7–10 days | via cargo\n🌴 Mindanao: 10–14 days | via cargo\n\n⚠️ SHOWROOM: Quezon City lang po kami.\nWala kaming branch sa Davao o ibang lugar.\nPero nag-de-deliver kami nationwide! 📦\n\n💰 Libre ang installation sa NCR!\nIpadala ang delivery address at i-compute namin ang fee. 😊\n📞 0915-743-9188",
 
 "discount": "💥 DISCOUNTS & PROMOS SA OBRA!\n\n💸 BULK ORDER — mas marami = mas malaking bawas!\n🏢 COMPANY/B2B — special rate + OR/Invoice\n📦 PACKAGE DEAL — Table+Chair+Cabinet = mas mura!\n🤝 LAHAT NEGOTIABLE — sabihin ang budget!\n\nPara sa pinaka-mababang presyo:\n1️⃣ Items + quantity\n2️⃣ Budget range (optional)\n3️⃣ Bibigyan namin ng BEST DEAL! 💪\n\n📖 https://tinyurl.com/obra-brochure-updated",
 
@@ -27,7 +27,7 @@ REPLIES = {
 
 "cabinets": "🗄️ OBRA STEEL STORAGE:\n\n• Sliding Steel Cabinet H900 — ₱4,300–₱4,700\n• Glass Cabinet H900 — ₱4,300\n• Glass Cabinet H1060 (3 layers) — ₱4,300–₱4,850\n• Filing Cabinet — ₱4,300+\n• Steel Locker — ask price\n• Steel Rack/Shelving — ask price\n• Mobile Drawer — ₱3,500–₱3,700\n• Extra shelves: +₱500\n\nGauge 20 | Heavy duty | 1-Year Warranty!\nIlang pcs at anong type? 😊",
 
-"location": "📍 OBRA OFFICE FURNITURE\n\nSHOWROOM:\nJudge Juan Luna, Roosevelt, Quezon City\n🕐 Mon–Fri: 9AM–5PM | Sat: 9AM–2:30PM\n⚠️ By appointment — call 1 day ahead!\n\nSATELLITE OFFICE:\n12 Santan, Bagbag, Quezon City\n\n📞 0915-743-9188 (Call/Viber)\n📧 obrafurniture@gmail.com\n🌐 www.obrafurniture.com",
+"location": "📍 OBRA OFFICE FURNITURE\n\n🏢 SHOWROOMS (Quezon City ONLY):\n• Judge Juan Luna, Roosevelt, QC\n  Mon–Fri 9AM–5PM | Sat 9AM–2:30PM\n• 12 Santan, Bagbag, QC 1116\n⚠️ By appointment — call 1 day ahead!\n\n🚚 WALA KAMING BRANCH SA DAVAO O IBANG PROBINSYA.\nPero nag-de-deliver kami NATIONWIDE!\n• Visayas: 7–10 days via cargo\n• Mindanao: 10–14 days via cargo\n• Luzon (probinsya): 3–5 days\n\n📞 0915-743-9188 (Call/Viber)\n📧 obrafurniture@gmail.com\n🌐 www.obrafurniture.com",
 
 "payment": "💳 PAYMENT OPTIONS SA OBRA:\n\n🔶 GCash: 0968-887-8850 (Annaliza V)\n🏦 UnionBank: 000690021288 (OBRA-EGC FURNITURE TRADING)\n💵 Cash on Delivery (COD)\n💵 Cash / Online Banking / E-wallets\n\n📸 Send proof of payment para mapabilis!\n✅ FREE Installation sa lahat ng orders!",
 
@@ -48,7 +48,7 @@ KEYWORDS = {
 "price":    ["price","presyo","magkano","how much","quote","halaga","mahal","kantidad","how much is","listed price","quotation","mag quote","tanong presyo"],
 "order":    ["order","paano","mag-order","purchase","buy","bibili","bilhin","place order","how to order","pano order","i want","gusto ko","saan bibili"],
 "order_form": ["sige po","go na","proceed na","push na","tuloy na","yes po order","confirm","ayos na","ok na po","i-order na","paorder","kukunin ko na","bili na","sige na","oo po","go","agreed","deal","tara na","pursue"],
-"delivery": ["delivery","deliver","ship","shipping","padala","libre","free delivery","lalamove","trucking","nationwide","sasakyan","mapadala","mindanao","visayas","luzon","province","region","cargo","forwarder","kelan darating","how long"],
+"delivery": ["delivery","deliver","ship","shipping","padala","libre","free delivery","lalamove","trucking","nationwide","sasakyan","mapadala","mindanao","visayas","luzon","province","region","cargo","forwarder","kelan darating","how long","davao","cebu","iloilo","bohol","palawan","batangas","pampanga","laguna","cavite","bulacan","ilocos","cagayan","zamboanga","cotabato","shipping fee","delivery fee","mapadala sa probinsya","probinsya"],
 "discount": ["discount","promo","sale","bawas","mas mura","bulk","wholesale","negotiable","tawad","pwede pa bawasan","may discount","cheaper","mura"],
 "products": ["products","ano ang","what do you","meron ba","offer","available","catalog","items","furniture","anong meron","what products","ano po"],
 "chairs":   ["chair","upuan","silya","mesh","high back","mid back","executive chair","visitors chair","reclining","office chair","ergonomic","swivel"],
@@ -56,7 +56,7 @@ KEYWORDS = {
 "lockers":  ["locker","18 door","12 door","6 door","4 door","locker cabinet","bagong locker"],
 "cabinets": ["cabinet","filing","rack","storage","shelf","shelving","drawer","steel cabinet","estante","file cabinet","steel storage"],
 "workstation": ["workstation","partition","cubicle","modular","open plan","divider","office setup","call center","bulk"],
-"location": ["location","address","saan","showroom","office","visit","pumunta","store","pickup","nasa saan","where are you","hours","oras","open","bukas"],
+"location": ["location","address","saan","showroom","office","visit","pumunta","store","pickup","nasa saan","where are you","hours","oras","open","bukas","branch","saan kayo","may branch","may showroom","davao branch","cebu branch","provincial branch","meron kayong branch"],
 "payment":  ["payment","bayad","gcash","unionbank","cod","cash","bank","bayaran","paano magbayad","payment options","paano bayad","gcash number","account number"],
 }
 
